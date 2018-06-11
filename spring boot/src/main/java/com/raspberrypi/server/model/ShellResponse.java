@@ -1,4 +1,4 @@
-package com.orlando.shell.model;
+package com.raspberrypi.server.model;
 
 public class ShellResponse {
 	

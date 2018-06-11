@@ -1,4 +1,4 @@
-package com.orlando.shell.util;
+package com.raspberrypi.server.util;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -7,12 +7,12 @@ import java.util.List;
 
 public class ShellScript {
 	
-	public static String executeCommand(String command) {
+	public static String executeCommand(String... command) {
 	    StringBuffer output = new StringBuffer();
-	    String homeDirectory = System.getProperty("user.home") + "/";
+	    
 	    Process p;
 	    try {
-	      p = Runtime.getRuntime().exec(homeDirectory + command);
+	      p = Runtime.getRuntime().exec(command);
 	      // p.waitFor();	
 	      InputStreamReader in = new InputStreamReader(p.getInputStream());
 	      BufferedReader reader = new BufferedReader(in);
