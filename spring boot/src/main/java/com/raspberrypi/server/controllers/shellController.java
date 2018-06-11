@@ -22,7 +22,7 @@ public class shellController {
 
 	@PostMapping("/functions")
 	public String execute(@RequestBody Command command) throws IOException, InterruptedException {
-		String homeDirectory = System.getProperty("user.home") + "/shell_functions.sh ";
+		String homeDirectory = System.getProperty("user.home") + "/server_functions/shell_functions.sh ";
 		String result = ShellScript.executeCommand(homeDirectory.concat(command.getFunction()).split(" "));
 		return result;
 	}
