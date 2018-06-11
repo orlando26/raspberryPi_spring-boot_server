@@ -1,4 +1,4 @@
-package com.orlando.shell;
+package com.raspberrypi.server;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
